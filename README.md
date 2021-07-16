@@ -31,27 +31,6 @@ Xampp es una opcion, pero tambien se puede tener algun otro que tenga un gestor 
 Debemos correr los siguientes comandos para poder instalarlo
 Abrir la terminal en la raiz del proyecto, abrir dos ventanas, una para backend y otra para frontend:
 
-### Para la parte del backend
-Comando para instalar las dependencias del backend laravel
-```sh
-cd backend
-composer install
-```
-
-Copiar el archivo .env.example a .env en la carpeta raíz
-Viene un .sql, debemos importarlo a una base de datos llamada: backend
-
-Comando para generar un key al proyecto
-```sh
-php artisan key:generate
-php artisan serve
-```
-
-Comando para poner en marcha el proyecto backend, y listo
-```sh
-php artisan serve
-```
-
 ### Para la parte del frontend
 Comando para instalar la carpeta node_modules
 ```sh
@@ -63,6 +42,37 @@ Comando para poner en marcha el proyecto frontend, y listo
 npm run watch
 ```
 
+### Para la parte del backend
+Comando para instalar las dependencias del backend laravel
+```sh
+cd backend
+composer install
+```
+
+Copiar el archivo .env.example a .env en la carpeta raíz
+Verificar en el archivo .env que las credenciales para conectarse al sistema gestor de la BD sea correcto(XAMPP, MAMP, etc), se encuentra en las lineas 14 y 15
+```sh
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+
+Viene un .sql, debemos importarlo a una base de datos llamada: backend
+
+Comando para generar un key al proyecto
+```sh
+php artisan key:generate
+php artisan serve
+```
+
+Comando para poner en marcha el proyecto backend
+```sh
+php artisan serve
+```
+El comando anterior nos debe mostrar como respuesta en la terminal una direccion donde podremos ver el sistema funcionando, por defecto muestra la siguiente direccion:
+```sh
+http://127.0.0.1:8000
+```
 
 ## Técnologias
 
